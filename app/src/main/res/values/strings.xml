@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Programm1</string>
+    <string name="logo">kekes memes</string>
+    <string name="hint_user_field">Enter city</string>
+</resources>
