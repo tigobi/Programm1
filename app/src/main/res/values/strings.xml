@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Programm1</string>
     <string name="logo">kekes memes</string>
-    <string name="userField">Enter city: </string>
-    <string name="main_button">Get weather </string>
-    <string name="result_info">Weather in your city: </string>]
-    <string name="noUserInput">Enter city!!</string>
+    <string name="userField">Enter pokemon: </string>
+    <string name="main_button">Get pokemon </string>
+    <string name="result_info">Pokemon info: </string>]
+    <string name="noUserInput">Enter pokemon!!</string>
+    <string name="currentPosition">Current position:</string>
 </resources>
