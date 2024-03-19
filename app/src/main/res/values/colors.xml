@@ -2,7 +2,9 @@
 <resources>
     <color name="colorPrimaryDark">#FF000000</color>
     <color name="black">#FF000000</color>
-    <color name="green">#FF008000</color>
+    <color name="green">#0ec730</color>
+    <color name="blue">#754bbd</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="red">#FFFF0000</color>
+    <color name="red">#e890a7</color>
+    <color name="darkRed">#c7345a</color>
 </resources>
