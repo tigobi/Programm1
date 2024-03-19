@@ -9,17 +9,6 @@
     android:rotationX="0"
     android:rotationY="0"
     tools:context=".MainActivity">
-
-    <TextView
-        android:id="@+id/logo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50sp"
-        android:fontFamily="@font/coming_soon"
-        android:text="@string/logo"
-        android:textAlignment="center"
-        android:textSize="24sp" />
-
     <TextView
         android:id="@+id/logo"
         android:layout_width="match_parent"

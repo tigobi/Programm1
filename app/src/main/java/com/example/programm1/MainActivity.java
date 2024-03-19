@@ -1,5 +1,6 @@
 package com.example.programm1;
 
+import android.annotation.SuppressLint;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         main_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (userField.getText().toString().trim().equals("")) {
+                if (userField.getText().toString().trim().isEmpty()) {
                     Toast.makeText(MainActivity.this, R.string.noUserInput, Toast.LENGTH_LONG).show();
                 } else {
                     String name = userField.getText().toString();
@@ -44,7 +45,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @SuppressLint("StaticFieldLeak")
     private class GetParsedURLData extends AsyncTask<String, String, String> {
+        @SuppressLint("SetTextI18n")
         protected void onPreExecute() {
             super.onPreExecute();
             result_info.setText("Waiting");
@@ -69,11 +72,11 @@ public class MainActivity extends AppCompatActivity {
                 int responseCode = connection.getResponseCode();
                 if (responseCode == HttpURLConnection.HTTP_OK) {
                     currentPosition.setText("YEAH");
+                    currentPosition.setText(url.toString());
                     StringBuilder response = new StringBuilder();
                     reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                    String line = "";
-                    for (int i = 0; i < 10; i++) {
-                        currentPosition.setText(line);
+                    String line;
+                    while ((line = reader.readLine()) != null) {
                         response.append(line);
                     }
                     jsonResponse = response.toString();
